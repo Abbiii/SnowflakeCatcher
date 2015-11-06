@@ -26,10 +26,8 @@ void draw()
 
 void mouseDragged()
 {
-  fill(0,(int)(Math.random()*256),(int)(Math.random()*200),250);
+  fill(100);
   ellipse(mouseX, mouseY, 10,10);
-  fill(0,0,0);
-  ellipse(mouseX+10,mouseY+10,10,10);
 }
 
 class Snowflake
@@ -39,7 +37,7 @@ class Snowflake
   Snowflake()
   {
     x = (int)(Math.random()*500);
-    y = 0;
+    y = (int)(Math.random()*500);
     isMoving = true;
   }
   void show()
@@ -67,6 +65,6 @@ class Snowflake
   }
   void wrap()
   {
-    if (y>500) {y = 0;}
+    if (y>495) {y = 0;}
   }
 }
